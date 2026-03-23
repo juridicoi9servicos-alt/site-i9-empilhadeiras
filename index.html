@@ -3,48 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>I9 Empilhadeiras | Locação</title>
-  <meta name="description" content="Locação de empilhadeiras, baterias tracionárias e carregadores em Fortaleza/CE." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <title>I9 Empilhadeiras</title>
+  <meta
+    name="description"
+    content="Locação de empilhadeiras para operações logísticas e industriais em Fortaleza/CE e região."
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="page-bg"></div>
 
-  <header class="header">
-    <div class="container header-top">
-      <a href="#inicio" class="brand" aria-label="I9 Empilhadeiras">
-        <img src="img/logo-header.png" alt="I9 Empilhadeiras" class="brand-logo">
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand" aria-label="I9 Empilhadeiras">
+        <img
+          src="imagem/logo-header.jpeg"
+          alt="I9 Empilhadeiras"
+          class="brand-logo"
+        />
       </a>
 
-      <nav class="menu" aria-label="Navegação principal">
+      <nav class="main-nav">
         <a href="#sobre">Sobre</a>
         <a href="#equipamentos">Equipamentos</a>
-        <a href="#contato" class="btn btn-outline">Orçamento</a>
+        <a href="#contato">Contato</a>
       </nav>
-    </div>
 
-    <div class="container header-line-wrap" aria-hidden="true">
-      <span class="header-line"></span>
+      <a href="#contato" class="nav-cta">Orçamento</a>
+
+      <button class="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
   <main>
-    <section class="hero" id="inicio">
+    <section class="hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <span class="tag">LOCAÇÃO EMPRESARIAL</span>
-          <h1>Locação de empilhadeiras para operações logísticas e industriais</h1>
-          <p>
+          <div class="hero-tag">
+            Soluções em movimentação de carga
+          </div>
+
+          <h1 class="hero-title">
+            Locação de <span>empilhadeiras</span> para operações logísticas e industriais
+          </h1>
+
+          <p class="hero-text">
             Soluções para movimentação de carga com atendimento empresarial ágil,
-            equipamentos revisados, suporte técnico e estrutura voltada para operações
-            em Fortaleza/CE e região.
+            equipamentos revisados, suporte técnico e estrutura voltada para
+            operações em Fortaleza/CE e região.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contato">Solicitar orçamento</a>
-            <a class="btn btn-outline" href="#equipamentos">Ver equipamentos</a>
+            <a href="#contato" class="btn btn-primary">Solicitar orçamento</a>
+            <a href="#equipamentos" class="btn btn-secondary">Ver equipamentos</a>
           </div>
 
           <ul class="hero-list">
@@ -53,329 +68,58 @@
             <li>Equipamentos revisados com suporte técnico e manutenção</li>
           </ul>
         </div>
-      </div>
-    </section>
 
-    <section class="section section-alt" id="sobre">
-      <div class="container">
-        <div class="section-header">
-          <span class="tag">QUEM SOMOS</span>
-          <h2>I9 Empilhadeiras</h2>
-          <p>
-            Atuação especializada em locação de empilhadeiras, baterias tracionárias e carregadores,
-            com foco em continuidade operacional, confiabilidade e atendimento técnico.
-          </p>
-        </div>
-
-        <div class="info-grid">
-          <article class="info-card info-card-large">
-            <h3>Locação com estrutura técnica e acompanhamento operacional</h3>
-            <p>
-              A <strong>I9 Empilhadeiras</strong>, nome fantasia de
-              <strong>INOVE LOCAÇÃO DE EMPILHADEIRAS E BATERIAS LTDA</strong>,
-              atua de forma especializada na locação de máquinas e equipamentos sem operador,
-              oferecendo soluções voltadas para movimentação de carga com padrão empresarial.
-            </p>
-            <p>
-              Os equipamentos passam por <strong>revisões rotineiras</strong>, inspeções e acompanhamento técnico,
-              buscando maior confiabilidade, disponibilidade e desempenho operacional para os clientes.
-            </p>
-            <p>
-              Além da locação, a empresa presta <strong>assistência técnica</strong> aos seus equipamentos,
-              realizando manutenção, reparos, ajustes e intervenções necessárias para preservar o perfeito
-              estado de conservação, funcionamento e operação das máquinas.
-            </p>
-            <p>
-              Isso proporciona maior segurança ao cliente, com resposta técnica mais eficiente e maior
-              continuidade da operação em caso de necessidade de manutenção corretiva ou preventiva.
-            </p>
-          </article>
-
-          <article class="info-card">
-            <h3>Dados da empresa</h3>
-            <ul class="clean-list">
-              <li><strong>CNPJ:</strong> 64.988.670/0001-40</li>
-              <li><strong>Endereço:</strong> Rua D, nº 630, Sala B, Ancuri, Fortaleza/CE</li>
-              <li><strong>E-mail:</strong> financeiro.i9empilhadeiras@gmail.com</li>
-              <li><strong>WhatsApp:</strong> (85) 99900-6501</li>
-            </ul>
-
-            <div class="info-highlight">
-              <h4>Diferenciais</h4>
-              <ul class="clean-list">
-                <li>Equipamentos revisados periodicamente</li>
-                <li>Assistência técnica nos equipamentos locados</li>
-                <li>Manutenção e reparos quando necessários</li>
-                <li>Atendimento voltado ao ambiente empresarial e industrial</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="equipamentos">
-      <div class="container">
-        <div class="section-header">
-          <span class="tag">EQUIPAMENTOS</span>
-          <h2>Modelos para locação</h2>
-          <p>
-            Passe o mouse para destacar. Clique na imagem para ampliar e solicitar orçamento diretamente do equipamento desejado.
-          </p>
-        </div>
-
-        <div class="products-grid">
-          <article class="product-card">
-            <button class="product-image-wrap image-trigger" type="button"
-              data-title="Yale MR16"
-              data-image="img/banner-retratil.png"
-              data-whatsapp="Olá! Tenho interesse em solicitar orçamento da empilhadeira Yale MR16."
-              aria-label="Abrir imagem da Yale MR16">
-              <img src="img/banner-retratil.png" alt="Yale MR16" class="product-image">
-              <span class="zoom-hint">Clique para ampliar</span>
-            </button>
-            <div class="product-body">
-              <span class="product-type">Empilhadeira elétrica retrátil</span>
-              <h3>Yale MR16</h3>
-              <ul class="clean-list">
-                <li>Capacidade de 2.000 kg</li>
-                <li>Corredor estreito</li>
-                <li>Elevação de até 8.500 mm</li>
-              </ul>
-              <a class="product-cta" href="https://wa.me/5585999006501?text=Olá!%20Tenho%20interesse%20em%20solicitar%20orçamento%20da%20empilhadeira%20Yale%20MR16." target="_blank" rel="noopener">Solicitar orçamento</a>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <button class="product-image-wrap image-trigger" type="button"
-              data-title="Still EGV 16"
-              data-image="img/banner-patolada.png"
-              data-whatsapp="Olá! Tenho interesse em solicitar orçamento da empilhadeira Still EGV 16."
-              aria-label="Abrir imagem da Still EGV 16">
-              <img src="img/banner-patolada.png" alt="Still EGV 16" class="product-image">
-              <span class="zoom-hint">Clique para ampliar</span>
-            </button>
-            <div class="product-body">
-              <span class="product-type">Empilhadeira elétrica patolada</span>
-              <h3>Still EGV 16</h3>
-              <ul class="clean-list">
-                <li>Capacidade de 1.600 kg e 1.800 kg</li>
-                <li>Elevação máxima de 5.466 mm</li>
-                <li>Plataforma rebatível</li>
-              </ul>
-              <a class="product-cta" href="https://wa.me/5585999006501?text=Olá!%20Tenho%20interesse%20em%20solicitar%20orçamento%20da%20empilhadeira%20Still%20EGV%2016." target="_blank" rel="noopener">Solicitar orçamento</a>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <button class="product-image-wrap image-trigger" type="button"
-              data-title="Still ERX 27"
-              data-image="img/banner-transpaleteira.png"
-              data-whatsapp="Olá! Tenho interesse em solicitar orçamento da transpaleteira Still ERX 27."
-              aria-label="Abrir imagem da Still ERX 27">
-              <img src="img/banner-transpaleteira.png" alt="Still ERX 27" class="product-image">
-              <span class="zoom-hint">Clique para ampliar</span>
-            </button>
-            <div class="product-body">
-              <span class="product-type">Transpaleteira elétrica</span>
-              <h3>Still ERX 27</h3>
-              <ul class="clean-list">
-                <li>Capacidade de 2.700 kg</li>
-                <li>Operador a bordo</li>
-                <li>Bateria 24V</li>
-              </ul>
-              <a class="product-cta" href="https://wa.me/5585999006501?text=Olá!%20Tenho%20interesse%20em%20solicitar%20orçamento%20da%20transpaleteira%20Still%20ERX%2027." target="_blank" rel="noopener">Solicitar orçamento</a>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <button class="product-image-wrap image-trigger" type="button"
-              data-title="Still CLX-25 Combustão"
-              data-image="img/banner-combustao.png"
-              data-whatsapp="Olá! Tenho interesse em solicitar orçamento da empilhadeira Still CLX-25 de combustão."
-              aria-label="Abrir imagem da Still CLX-25 combustão">
-              <img src="img/banner-combustao.png" alt="Still CLX-25 combustão" class="product-image">
-              <span class="zoom-hint">Clique para ampliar</span>
-            </button>
-            <div class="product-body">
-              <span class="product-type">Empilhadeira de combustão</span>
-              <h3>Still CLX-25</h3>
-              <ul class="clean-list">
-                <li>Carga de 2.500 kg</li>
-                <li>Elevação de 4.700 mm</li>
-                <li>Torre duplex</li>
-              </ul>
-              <a class="product-cta" href="https://wa.me/5585999006501?text=Olá!%20Tenho%20interesse%20em%20solicitar%20orçamento%20da%20empilhadeira%20Still%20CLX-25%20de%20combustão." target="_blank" rel="noopener">Solicitar orçamento</a>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <button class="product-image-wrap image-trigger" type="button"
-              data-title="Still CLX-25 GLP"
-              data-image="img/banner-glp.png"
-              data-whatsapp="Olá! Tenho interesse em solicitar orçamento da empilhadeira Still CLX-25 a GLP."
-              aria-label="Abrir imagem da Still CLX-25 GLP">
-              <img src="img/banner-glp.png" alt="Still CLX-25 GLP" class="product-image">
-              <span class="zoom-hint">Clique para ampliar</span>
-            </button>
-            <div class="product-body">
-              <span class="product-type">Empilhadeira a GLP</span>
-              <h3>Still CLX-25</h3>
-              <ul class="clean-list">
-                <li>Capacidade de 2.500 kg</li>
-                <li>Elevação de 4.700 mm</li>
-                <li>Torre triplex</li>
-              </ul>
-              <a class="product-cta" href="https://wa.me/5585999006501?text=Olá!%20Tenho%20interesse%20em%20solicitar%20orçamento%20da%20empilhadeira%20Still%20CLX-25%20a%20GLP." target="_blank" rel="noopener">Solicitar orçamento</a>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <button class="product-image-wrap image-trigger" type="button"
-              data-title="Paletrans PT 1654 / PT 1645"
-              data-image="img/banner-eletrica.jpeg"
-              data-whatsapp="Olá! Tenho interesse em solicitar orçamento da empilhadeira Paletrans PT 1654 / PT 1645."
-              aria-label="Abrir imagem da Paletrans PT 1654 / PT 1645">
-              <img src="img/banner-eletrica.jpeg" alt="Paletrans PT 1654 e PT 1645" class="product-image">
-              <span class="zoom-hint">Clique para ampliar</span>
-            </button>
-            <div class="product-body">
-              <span class="product-type">Empilhadeira elétrica tracionária</span>
-              <h3>Paletrans PT 1654 / PT 1645</h3>
-              <ul class="clean-list">
-                <li>Capacidade de 1.600 kg</li>
-                <li>Modelos com 5.400 mm e 4.500 mm</li>
-                <li>Movimentação e armazenagem</li>
-              </ul>
-              <a class="product-cta" href="https://wa.me/5585999006501?text=Olá!%20Tenho%20interesse%20em%20solicitar%20orçamento%20da%20empilhadeira%20Paletrans%20PT%201654%20/%20PT%201645." target="_blank" rel="noopener">Solicitar orçamento</a>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <button class="product-image-wrap image-trigger" type="button"
-              data-title="Baterias Tracionárias e Carregadores"
-              data-image="img/banner-carregadores.png"
-              data-whatsapp="Olá! Tenho interesse em solicitar orçamento de baterias tracionárias e carregadores."
-              aria-label="Abrir imagem de baterias e carregadores">
-              <img src="img/banner-carregadores.png" alt="Baterias e carregadores tracionários" class="product-image">
-              <span class="zoom-hint">Clique para ampliar</span>
-            </button>
-            <div class="product-body">
-              <span class="product-type">Baterias e carregadores</span>
-              <h3>Baterias Tracionárias e Carregadores</h3>
-              <ul class="clean-list">
-                <li>Soluções para operações elétricas</li>
-                <li>Carregadores em diferentes voltagens</li>
-                <li>Composição comercial conforme necessidade operacional</li>
-              </ul>
-              <a class="product-cta" href="https://wa.me/5585999006501?text=Olá!%20Tenho%20interesse%20em%20solicitar%20orçamento%20de%20baterias%20tracionárias%20e%20carregadores." target="_blank" rel="noopener">Solicitar orçamento</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="contato">
-      <div class="container">
-        <div class="contact-box">
-          <div class="contact-content">
-            <span class="tag">CONTATO</span>
-            <h2>Solicite seu orçamento</h2>
-            <p>
-              Entre em contato para análise da melhor solução para sua operação e disponibilidade comercial.
-            </p>
-          </div>
-
-          <div class="contact-actions">
-            <a class="btn btn-primary" href="https://wa.me/5585999006501" target="_blank" rel="noopener">WhatsApp: (85) 99900-6501</a>
-            <a class="btn btn-outline" href="mailto:financeiro.i9empilhadeiras@gmail.com">financeiro.i9empilhadeiras@gmail.com</a>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="hero-card-glow"></div>
+            <img
+              src="imagem/banner-eletrica.jpeg"
+              alt="Empilhadeira elétrica"
+              class="hero-image"
+            />
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="placeholder-section">
+      <div class="container">
+        <h2>Sobre</h2>
+        <p>
+          Estrutura pronta para operações logísticas e industriais, com foco em
+          agilidade, suporte técnico e atendimento empresarial.
+        </p>
+      </div>
+    </section>
+
+    <section id="equipamentos" class="placeholder-section">
+      <div class="container">
+        <h2>Equipamentos</h2>
+        <p>
+          Ajuste esta seção com os equipamentos e banners do seu projeto.
+        </p>
+      </div>
+    </section>
+
+    <section id="contato" class="placeholder-section">
+      <div class="container">
+        <h2>Contato</h2>
+        <p>
+          Adicione aqui WhatsApp, telefone, e-mail e formulário.
+        </p>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>I9 EMPILHADEIRAS</h3>
-        <p>INOVE LOCAÇÃO DE EMPILHADEIRAS E BATERIAS LTDA</p>
-        <p>CNPJ: 64.988.670/0001-40</p>
-      </div>
-
-      <div>
-        <h3>Contato</h3>
-        <p>WhatsApp: (85) 99900-6501</p>
-        <p>E-mail: financeiro.i9empilhadeiras@gmail.com</p>
-        <p>Fortaleza/CE</p>
-      </div>
-
-      <div>
-        <h3>Observação</h3>
-        <p>Condições comerciais, disponibilidade e especificações sujeitas à análise e formalização contratual.</p>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p>Site institucional da I9 Empilhadeiras.</p>
-    </div>
-  </footer>
-
-  <div class="image-modal" id="imageModal" aria-hidden="true">
-    <div class="image-modal-backdrop" id="modalBackdrop"></div>
-    <div class="image-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="image-modal-close" id="modalClose" aria-label="Fechar imagem">×</button>
-      <div class="image-modal-content">
-        <img src="" alt="" id="modalImage">
-        <div class="image-modal-info">
-          <h3 id="modalTitle"></h3>
-          <a href="#" target="_blank" rel="noopener" class="btn btn-primary" id="modalQuote">Solicitar orçamento</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <script>
-    const modal = document.getElementById('imageModal');
-    const modalImage = document.getElementById('modalImage');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalQuote = document.getElementById('modalQuote');
-    const modalClose = document.getElementById('modalClose');
-    const modalBackdrop = document.getElementById('modalBackdrop');
-    const triggers = document.querySelectorAll('.image-trigger');
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".main-nav");
 
-    function openModal(title, image, whatsappText) {
-      modalImage.src = image;
-      modalImage.alt = title;
-      modalTitle.textContent = title;
-      modalQuote.href = 'https://wa.me/5585999006501?text=' + encodeURIComponent(whatsappText);
-      modal.classList.add('is-open');
-      modal.setAttribute('aria-hidden', 'false');
-      document.body.classList.add('modal-open');
-    }
-
-    function closeModal() {
-      modal.classList.remove('is-open');
-      modal.setAttribute('aria-hidden', 'true');
-      modalImage.src = '';
-      document.body.classList.remove('modal-open');
-    }
-
-    triggers.forEach(trigger => {
-      trigger.addEventListener('click', () => {
-        openModal(trigger.dataset.title, trigger.dataset.image, trigger.dataset.whatsapp);
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
       });
-    });
-
-    modalClose.addEventListener('click', closeModal);
-    modalBackdrop.addEventListener('click', closeModal);
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && modal.classList.contains('is-open')) {
-        closeModal();
-      }
-    });
+    }
   </script>
-
 </body>
 </html>
