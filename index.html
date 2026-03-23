@@ -5,352 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>I9 Empilhadeiras | Locação</title>
   <meta name="description" content="Locação de empilhadeiras, baterias tracionárias e carregadores em Fortaleza/CE." />
-  <style>
-    :root{
-      --bg:#020202;
-      --bg-2:#061106;
-      --card:#070b07;
-      --line:rgba(153,255,0,.20);
-      --green:#b7ff2a;
-      --green-strong:#8dff00;
-      --green-soft:#e3ff9e;
-      --white:#f5f5f5;
-      --muted:#c8c8c8;
-      --shadow:0 0 22px rgba(141,255,0,.12);
-    }
-
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:Arial, Helvetica, sans-serif;
-      color:var(--white);
-      background:
-        radial-gradient(circle at top, rgba(141,255,0,.08), transparent 20%),
-        linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 40%, var(--bg) 100%);
-      line-height:1.6;
-    }
-
-    img{max-width:100%;display:block}
-    a{text-decoration:none;color:inherit}
-    .container{width:min(1180px, 92%);margin:0 auto}
-
-    .header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(2,2,2,.92);
-      backdrop-filter:blur(8px);
-      border-bottom:1px solid var(--line);
-    }
-
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      padding:14px 0;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-    }
-
-    .brand img{
-      width:62px;
-      height:62px;
-      object-fit:contain;
-      filter:drop-shadow(0 0 10px rgba(141,255,0,.20));
-    }
-
-    .brand h1{
-      color:var(--green);
-      font-size:1.15rem;
-      line-height:1.1;
-      font-weight:800;
-    }
-
-    .brand p{
-      color:var(--muted);
-      font-size:.85rem;
-    }
-
-    .menu{
-      display:flex;
-      align-items:center;
-      gap:18px;
-    }
-
-    .menu a{
-      font-weight:700;
-      color:#fff;
-    }
-
-    .menu a:hover{
-      color:var(--green);
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:14px 22px;
-      border-radius:14px;
-      font-weight:800;
-      transition:.25s ease;
-      border:1px solid transparent;
-    }
-
-    .btn-primary{
-      color:#111;
-      background:linear-gradient(135deg, var(--green-strong), var(--green));
-      box-shadow:0 0 24px rgba(141,255,0,.18);
-    }
-
-    .btn-primary:hover{
-      transform:translateY(-2px);
-      box-shadow:0 0 32px rgba(141,255,0,.26);
-    }
-
-    .btn-outline{
-      border:1px solid rgba(141,255,0,.28);
-      color:var(--green-soft);
-      background:transparent;
-    }
-
-    .btn-outline:hover{
-      background:rgba(141,255,0,.06);
-    }
-
-    .hero{
-      padding:84px 0 60px;
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.08fr .92fr;
-      gap:34px;
-      align-items:center;
-    }
-
-    .tag{
-      display:inline-block;
-      padding:8px 14px;
-      border-radius:999px;
-      border:1px solid rgba(141,255,0,.34);
-      color:var(--green-soft);
-      font-size:.78rem;
-      font-weight:800;
-      letter-spacing:.05em;
-      margin-bottom:16px;
-      background:rgba(141,255,0,.03);
-    }
-
-    .hero h2{
-      font-size:clamp(2.4rem, 5vw, 5.1rem);
-      line-height:1.03;
-      margin-bottom:18px;
-      font-weight:800;
-    }
-
-    .hero p{
-      color:var(--muted);
-      font-size:1.05rem;
-      margin-bottom:24px;
-      max-width:710px;
-    }
-
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      margin-bottom:24px;
-    }
-
-    .list{
-      list-style:none;
-      display:grid;
-      gap:8px;
-    }
-
-    .list li{
-      position:relative;
-      padding-left:18px;
-      color:#e9f9c3;
-    }
-
-    .list li::before{
-      content:"•";
-      position:absolute;
-      left:0;
-      color:var(--green);
-    }
-
-    .hero-box,
-    .card,
-    .product,
-    .contact-box{
-      background:linear-gradient(180deg, rgba(255,255,255,.012), rgba(141,255,0,.02));
-      border:1px solid var(--line);
-      border-radius:22px;
-      box-shadow:var(--shadow);
-    }
-
-    .hero-box{padding:18px}
-    .hero-box img{
-      width:100%;
-      border-radius:14px;
-      object-fit:cover;
-      background:#000;
-    }
-
-    .section{padding:80px 0}
-
-    .section-dark{
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-      background:rgba(255,255,255,.01);
-    }
-
-    .section-title{
-      text-align:center;
-      margin-bottom:34px;
-    }
-
-    .section-title h3{
-      margin-top:12px;
-      font-size:clamp(1.9rem, 3vw, 2.9rem);
-    }
-
-    .grid-2{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:22px;
-    }
-
-    .card{padding:24px}
-
-    .card h4{
-      color:var(--green);
-      margin-bottom:12px;
-      font-size:1.15rem;
-    }
-
-    .card p,
-    .contact-box p,
-    .footer p{
-      color:var(--muted);
-    }
-
-    .products{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:22px;
-    }
-
-    .product{
-      overflow:hidden;
-    }
-
-    .product img{
-      width:100%;
-      height:320px;
-      object-fit:cover;
-      background:#000;
-    }
-
-    .product-content{
-      padding:18px;
-    }
-
-    .product h4{
-      color:var(--green);
-      margin-bottom:8px;
-      font-size:1.22rem;
-    }
-
-    .product small{
-      display:block;
-      color:var(--green-soft);
-      margin-bottom:12px;
-      font-weight:800;
-    }
-
-    .contact-box{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:22px;
-      padding:28px;
-      align-items:center;
-    }
-
-    .contact-actions{
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-    }
-
-    .footer{
-      border-top:1px solid var(--line);
-      background:#010101;
-      padding:42px 0 48px;
-    }
-
-    .footer-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr 1fr;
-      gap:22px;
-    }
-
-    .footer h4{
-      color:var(--green);
-      margin-bottom:10px;
-    }
-
-    .mini{
-      text-align:center;
-      margin-top:18px;
-      color:#9a9a9a;
-      font-size:.86rem;
-    }
-
-    @media (max-width: 980px){
-      .hero-grid,
-      .grid-2,
-      .products,
-      .contact-box,
-      .footer-grid{
-        grid-template-columns:1fr;
-      }
-
-      .menu{display:none}
-      .product img{height:auto}
-    }
-
-    @media (max-width: 640px){
-      .hero{padding-top:52px}
-      .section{padding:60px 0}
-      .btn{width:100%}
-      .brand img{width:52px;height:52px}
-      .brand h1{font-size:1rem}
-      .brand p{font-size:.78rem}
-    }
-  </style>
+  <!-- Fonts & styles extracted to styles.css -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <header class="header">
     <div class="container nav">
       <div class="brand">
-        <img src="img/logo.png" alt="Logo I9 Empilhadeiras">
+        <img src="img/logo.png" alt="Logo I9 Empilhadeiras" class="brand-logo">
         <div>
-          <h1>I9 EMPILHADEIRAS</h1>
-          <p>Locação de empilhadeiras, baterias e carregadores</p>
+          <h1 class="brand-title">I9 EMPILHADEIRAS</h1>
+          <p class="brand-sub">Locação de empilhadeiras, baterias e carregadores</p>
         </div>
       </div>
 
-      <nav class="menu">
+      <nav class="menu" aria-label="Main navigation">
         <a href="#sobre">Sobre</a>
         <a href="#equipamentos">Equipamentos</a>
         <a href="#contato" class="btn btn-outline">Orçamento</a>
@@ -358,172 +29,174 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="tag">LOCAÇÃO EMPRESARIAL</span>
-        <h2>Locação de empilhadeiras para operações logísticas e industriais</h2>
-        <p>
-          A I9 Empilhadeiras atua com foco em locação de empilhadeiras, baterias tracionárias
-          e carregadores, com atendimento comercial ágil, estrutura empresarial regular e
-          proposta adequada para operações em Fortaleza/CE e região.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/5585999006501" target="_blank">Solicitar orçamento</a>
-          <a class="btn btn-outline" href="#equipamentos">Ver equipamentos</a>
-        </div>
-
-        <ul class="list">
-          <li>Locação de empilhadeiras sem operador</li>
-          <li>Atendimento empresarial e industrial</li>
-          <li>Formalização contratual e atendimento comercial rápido</li>
-        </ul>
-      </div>
-
-      <div class="hero-box">
-        <img src="img/banner-carregadores.png" alt="Carregadores tracionários">
-      </div>
-    </div>
-  </section>
-
-  <section id="sobre" class="section section-dark">
-    <div class="container">
-      <div class="section-title">
-        <span class="tag">QUEM SOMOS</span>
-        <h3>I9 Empilhadeiras</h3>
-      </div>
-
-      <div class="grid-2">
-        <div class="card">
-          <h4>Apresentação institucional</h4>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="tag">LOCAÇÃO EMPRESARIAL</span>
+          <h2>Locação de empilhadeiras para operações logísticas e industriais</h2>
           <p>
-            A <strong>I9 Empilhadeiras</strong>, nome fantasia de <strong>INOVE LOCAÇÃO DE EMPILHADEIRAS E BATERIAS LTDA</strong>,
-            atua com locação de máquinas e equipamentos sem operador, com foco em empilhadeiras,
-            baterias tracionárias e carregadores para operações empresariais.
+            A I9 Empilhadeiras atua com foco em locação de empilhadeiras, baterias tracionárias
+            e carregadores, com atendimento comercial ágil, estrutura empresarial regular e
+            proposta adequada para operações em Fortaleza/CE e região.
           </p>
-        </div>
 
-        <div class="card">
-          <h4>Dados da empresa</h4>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/5585999006501" target="_blank" rel="noopener">Solicitar orçamento</a>
+            <a class="btn btn-outline" href="#equipamentos">Ver equipamentos</a>
+          </div>
+
           <ul class="list">
-            <li>CNPJ: 64.988.670/0001-40</li>
-            <li>Endereço: Rua D, nº 630, Sala B, Ancuri, Fortaleza/CE</li>
-            <li>E-mail: financeiro.i9empilhadeiras@gmail.com</li>
-            <li>WhatsApp: (85) 99900-6501</li>
+            <li>Locação de empilhadeiras sem operador</li>
+            <li>Atendimento empresarial e industrial</li>
+            <li>Formalização contratual e atendimento comercial rápido</li>
           </ul>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="equipamentos" class="section">
-    <div class="container">
-      <div class="section-title">
-        <span class="tag">EQUIPAMENTOS</span>
-        <h3>Destaques para locação</h3>
-      </div>
-
-      <div class="products">
-        <article class="product">
-          <img src="img/banner-retratil.png" alt="Yale MR16">
-          <div class="product-content">
-            <h4>Yale MR16</h4>
-            <small>Empilhadeira elétrica retrátil</small>
-            <ul class="list">
-              <li>Capacidade de 2.000 kg</li>
-              <li>Corredor estreito</li>
-              <li>Elevação de até 8.500 mm</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="product">
-          <img src="img/banner-patolada.png" alt="Still EGV 16">
-          <div class="product-content">
-            <h4>Still EGV 16</h4>
-            <small>Empilhadeira elétrica patolada</small>
-            <ul class="list">
-              <li>Capacidade de 1.600 kg e 1.800 kg</li>
-              <li>Elevação máxima de 5.466 mm</li>
-              <li>Plataforma rebatível</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="product">
-          <img src="img/banner-transpaleteira.png" alt="Still ERX 27">
-          <div class="product-content">
-            <h4>Still ERX 27</h4>
-            <small>Transpaleteira elétrica tracionária</small>
-            <ul class="list">
-              <li>Capacidade de 2.700 kg</li>
-              <li>Operador a bordo</li>
-              <li>Bateria 24V</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="product">
-          <img src="img/banner-combustao.png" alt="Still CLX-25 combustão">
-          <div class="product-content">
-            <h4>Still CLX-25</h4>
-            <small>Empilhadeira de combustão</small>
-            <ul class="list">
-              <li>Carga de 2.500 kg</li>
-              <li>Elevação de 4.700 mm</li>
-              <li>Torre duplex</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="product">
-          <img src="img/banner-glp.png" alt="Still CLX-25 GLP">
-          <div class="product-content">
-            <h4>Still CLX-25</h4>
-            <small>Empilhadeira a GLP</small>
-            <ul class="list">
-              <li>Capacidade de 2.500 kg</li>
-              <li>Elevação de 4.700 mm</li>
-              <li>Torre triplex</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="product">
-          <img src="img/banner-eletrica.jpeg" alt="Paletrans PT 1654 e PT 1645">
-          <div class="product-content">
-            <h4>Paletrans PT 1654 / PT 1645</h4>
-            <small>Empilhadeira elétrica tracionária</small>
-            <ul class="list">
-              <li>Capacidade de 1.600 kg</li>
-              <li>Modelos com 5.400 mm e 4.500 mm</li>
-              <li>Movimentação e armazenagem</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="contato" class="section section-dark">
-    <div class="container">
-      <div class="contact-box">
-        <div>
-          <span class="tag">CONTATO</span>
-          <h3>Solicite seu orçamento</h3>
-          <p>
-            Entre em contato com a I9 Empilhadeiras para análise da melhor solução para sua operação.
-          </p>
-        </div>
-
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="https://wa.me/5585999006501" target="_blank">WhatsApp: (85) 99900-6501</a>
-          <a class="btn btn-outline" href="mailto:financeiro.i9empilhadeiras@gmail.com">financeiro.i9empilhadeiras@gmail.com</a>
+        <div class="hero-box" aria-hidden="true">
+          <img src="img/banner-carregadores.png" alt="Carregadores tracionários" class="hero-image">
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="sobre" class="section section-dark">
+      <div class="container">
+        <div class="section-title">
+          <span class="tag">QUEM SOMOS</span>
+          <h3>I9 Empilhadeiras</h3>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h4>Apresentação institucional</h4>
+            <p>
+              A <strong>I9 Empilhadeiras</strong>, nome fantasia de <strong>INOVE LOCAÇÃO DE EMPILHADEIRAS E BATERIAS LTDA</strong>,
+              atua com locação de máquinas e equipamentos sem operador, com foco em empilhadeiras,
+              baterias tracionárias e carregadores para operações empresariais.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>Dados da empresa</h4>
+            <ul class="list">
+              <li>CNPJ: 64.988.670/0001-40</li>
+              <li>Endereço: Rua D, nº 630, Sala B, Ancuri, Fortaleza/CE</li>
+              <li>E-mail: financeiro.i9empilhadeiras@gmail.com</li>
+              <li>WhatsApp: (85) 99900-6501</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="equipamentos" class="section">
+      <div class="container">
+        <div class="section-title">
+          <span class="tag">EQUIPAMENTOS</span>
+          <h3>Destaques para locação</h3>
+        </div>
+
+        <div class="products">
+          <article class="product">
+            <img src="img/banner-retratil.png" alt="Yale MR16" class="product-image">
+            <div class="product-content">
+              <h4>Yale MR16</h4>
+              <small>Empilhadeira elétrica retrátil</small>
+              <ul class="list">
+                <li>Capacidade de 2.000 kg</li>
+                <li>Corredor estreito</li>
+                <li>Elevação de até 8.500 mm</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product">
+            <img src="img/banner-patolada.png" alt="Still EGV 16" class="product-image">
+            <div class="product-content">
+              <h4>Still EGV 16</h4>
+              <small>Empilhadeira elétrica patolada</small>
+              <ul class="list">
+                <li>Capacidade de 1.600 kg e 1.800 kg</li>
+                <li>Elevação máxima de 5.466 mm</li>
+                <li>Plataforma rebatível</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product">
+            <img src="img/banner-transpaleteira.png" alt="Still ERX 27" class="product-image">
+            <div class="product-content">
+              <h4>Still ERX 27</h4>
+              <small>Transpaleteira elétrica tracionária</small>
+              <ul class="list">
+                <li>Capacidade de 2.700 kg</li>
+                <li>Operador a bordo</li>
+                <li>Bateria 24V</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product">
+            <img src="img/banner-combustao.png" alt="Still CLX-25 combustão" class="product-image">
+            <div class="product-content">
+              <h4>Still CLX-25</h4>
+              <small>Empilhadeira de combustão</small>
+              <ul class="list">
+                <li>Carga de 2.500 kg</li>
+                <li>Elevação de 4.700 mm</li>
+                <li>Torre duplex</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product">
+            <img src="img/banner-glp.png" alt="Still CLX-25 GLP" class="product-image">
+            <div class="product-content">
+              <h4>Still CLX-25</h4>
+              <small>Empilhadeira a GLP</small>
+              <ul class="list">
+                <li>Capacidade de 2.500 kg</li>
+                <li>Elevação de 4.700 mm</li>
+                <li>Torre triplex</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product">
+            <img src="img/banner-eletrica.jpeg" alt="Paletrans PT 1654 e PT 1645" class="product-image">
+            <div class="product-content">
+              <h4>Paletrans PT 1654 / PT 1645</h4>
+              <small>Empilhadeira elétrica tracionária</small>
+              <ul class="list">
+                <li>Capacidade de 1.600 kg</li>
+                <li>Modelos com 5.400 mm e 4.500 mm</li>
+                <li>Movimentação e armazenagem</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section section-dark">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <span class="tag">CONTATO</span>
+            <h3>Solicite seu orçamento</h3>
+            <p>
+              Entre em contato com a I9 Empilhadeiras para análise da melhor solução para sua operação.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="https://wa.me/5585999006501" target="_blank" rel="noopener">WhatsApp: (85) 99900-6501</a>
+            <a class="btn btn-outline" href="mailto:financeiro.i9empilhadeiras@gmail.com">financeiro.i9empilhadeiras@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container footer-grid">
