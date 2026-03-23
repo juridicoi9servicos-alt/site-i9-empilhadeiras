@@ -7,7 +7,7 @@
   <meta name="description" content="Locação de empilhadeiras, baterias tracionárias e carregadores em Fortaleza/CE." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
     <div class="container nav">
       <a href="#inicio" class="brand" aria-label="I9 Empilhadeiras">
         <img src="img/logo.png" alt="Logo I9 Empilhadeiras" class="brand-logo">
-        <div class="brand-copy">
+        <div class="brand-meta">
           <p class="brand-sub">Locação de empilhadeiras, baterias e carregadores</p>
         </div>
       </a>
@@ -37,8 +37,8 @@
           <h1>Locação de empilhadeiras para operações logísticas e industriais</h1>
           <p>
             Soluções para movimentação de carga com atendimento empresarial ágil,
-            estrutura comercial organizada, equipamentos revisados e suporte técnico
-            voltado para operações em Fortaleza/CE e região.
+            equipamentos revisados, suporte técnico e estrutura voltada para operações
+            em Fortaleza/CE e região.
           </p>
 
           <div class="hero-actions">
@@ -62,7 +62,7 @@
           <h2>I9 Empilhadeiras</h2>
           <p>
             Atuação especializada em locação de empilhadeiras, baterias tracionárias e carregadores,
-            com foco em continuidade operacional, segurança técnica e atendimento empresarial.
+            com foco em continuidade operacional, confiabilidade e atendimento técnico.
           </p>
         </div>
 
@@ -73,20 +73,20 @@
               A <strong>I9 Empilhadeiras</strong>, nome fantasia de
               <strong>INOVE LOCAÇÃO DE EMPILHADEIRAS E BATERIAS LTDA</strong>,
               atua de forma especializada na locação de máquinas e equipamentos sem operador,
-              oferecendo soluções para movimentação de carga com padrão empresarial e suporte técnico.
+              oferecendo soluções voltadas para movimentação de carga com padrão empresarial.
             </p>
             <p>
-              Os equipamentos passam por <strong>revisões rotineiras</strong>, acompanhamento de conservação
-              e verificação operacional, buscando maior confiabilidade, disponibilidade e desempenho nas operações dos clientes.
+              Os equipamentos passam por <strong>revisões rotineiras</strong>, inspeções e acompanhamento técnico,
+              buscando maior confiabilidade, disponibilidade e desempenho operacional para os clientes.
             </p>
             <p>
-              Além da locação, a empresa também presta <strong>assistência técnica aos seus equipamentos</strong>,
-              realizando manutenção, reparos, ajustes e intervenções necessárias para manter as máquinas em
-              perfeito estado de conservação, funcionamento e operação.
+              Além da locação, a empresa presta <strong>assistência técnica</strong> aos seus equipamentos,
+              realizando manutenção, reparos, ajustes e intervenções necessárias para preservar o perfeito
+              estado de conservação, funcionamento e operação das máquinas.
             </p>
             <p>
-              Isso proporciona maior segurança ao cliente, com suporte mais completo, resposta técnica mais eficiente
-              e maior continuidade operacional em caso de necessidade de manutenção corretiva ou preventiva.
+              Isso proporciona maior segurança ao cliente, com resposta técnica mais eficiente e maior
+              continuidade da operação em caso de necessidade de manutenção corretiva ou preventiva.
             </p>
           </article>
 
@@ -362,11 +362,7 @@
 
     triggers.forEach(trigger => {
       trigger.addEventListener('click', () => {
-        openModal(
-          trigger.dataset.title,
-          trigger.dataset.image,
-          trigger.dataset.whatsapp
-        );
+        openModal(trigger.dataset.title, trigger.dataset.image, trigger.dataset.whatsapp);
       });
     });
 
