@@ -70,8 +70,6 @@ ul {
   z-index: 2;
 }
 
-/* HEADER */
-
 .site-header {
   position: sticky;
   top: 0;
@@ -206,8 +204,6 @@ ul {
   border-radius: 999px;
 }
 
-/* HERO */
-
 .hero {
   position: relative;
   padding: 78px 0 64px;
@@ -328,22 +324,11 @@ ul {
     0 0 24px rgba(0, 255, 136, 0.2);
 }
 
-.btn-primary:hover {
-  box-shadow:
-    0 16px 32px rgba(0, 0, 0, 0.32),
-    0 0 28px rgba(0, 255, 136, 0.24);
-}
-
 .btn-secondary {
   border: 1px solid rgba(0, 255, 136, 0.3);
   background: rgba(0, 255, 136, 0.04);
   color: var(--green-strong);
   box-shadow: 0 0 16px rgba(0, 255, 136, 0.08);
-}
-
-.btn-secondary:hover {
-  border-color: rgba(0, 255, 136, 0.48);
-  background: rgba(0, 255, 136, 0.08);
 }
 
 .hero-list {
@@ -386,7 +371,7 @@ ul {
   width: 100%;
   max-width: 520px;
   min-height: 470px;
-  border-radius: var(--radius-lg);
+  border-radius: 28px;
   border: 1px solid rgba(0, 255, 136, 0.18);
   background:
     linear-gradient(180deg, rgba(10, 22, 17, 0.92), rgba(5, 12, 9, 0.86));
@@ -395,16 +380,6 @@ ul {
     0 0 22px rgba(0, 255, 136, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.03);
   overflow: hidden;
-}
-
-.hero-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(135deg, rgba(0, 255, 136, 0.08), transparent 30%, transparent 70%, rgba(0, 255, 136, 0.04));
-  pointer-events: none;
-  z-index: 2;
 }
 
 .hero-card-glow {
@@ -426,8 +401,6 @@ ul {
   opacity: 0.93;
 }
 
-/* PLACEHOLDER SECTIONS */
-
 .placeholder-section {
   padding: 90px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.04);
@@ -445,8 +418,6 @@ ul {
   line-height: 1.7;
   max-width: 760px;
 }
-
-/* RESPONSIVO */
 
 @media (max-width: 1080px) {
   .hero-grid {
@@ -494,20 +465,12 @@ ul {
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35);
   }
 
-  .main-nav.active a::after {
-    bottom: -4px;
-  }
-
   .brand-logo {
     height: 46px;
   }
 
   .hero {
     padding-top: 48px;
-  }
-
-  .hero-title {
-    letter-spacing: -1.4px;
   }
 
   .hero-text {
