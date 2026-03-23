@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   background: #000000;
   color: var(--text);
   line-height: 1.6;
@@ -64,12 +64,13 @@ button {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #000000;
+  background: rgba(0, 0, 0, 0.96);
   border-bottom: 1px solid rgba(0, 255, 106, 0.08);
+  backdrop-filter: blur(8px);
 }
 
 .nav {
-  min-height: 118px;
+  min-height: 132px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -79,43 +80,42 @@ button {
 .brand {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 24px;
   min-width: 0;
 }
 
 .brand-logo {
-  width: 138px;
-  height: 92px;
+  width: 210px;
+  height: 112px;
   object-fit: contain;
   object-position: left center;
   flex-shrink: 0;
-  image-rendering: auto;
-  filter: drop-shadow(0 0 10px rgba(0, 255, 106, 0.08));
+  filter: drop-shadow(0 0 12px rgba(0, 255, 106, 0.06));
 }
 
-.brand-copy {
+.brand-meta {
   display: flex;
   align-items: center;
 }
 
 .brand-sub {
-  font-family: 'Sora', sans-serif;
-  font-size: 1.02rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
   font-weight: 500;
-  color: #d8dfda;
-  line-height: 1.2;
-  max-width: 380px;
+  color: #d8ded9;
+  line-height: 1.25;
+  max-width: 360px;
 }
 
 .menu {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
 .menu a {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.98rem;
   font-weight: 600;
   color: var(--text);
@@ -134,8 +134,8 @@ button {
   min-height: 50px;
   padding: 12px 22px;
   border-radius: var(--radius-sm);
-  font-family: 'Sora', sans-serif;
-  font-size: 0.96rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
   font-weight: 700;
   transition: all var(--transition);
   border: 1px solid transparent;
@@ -144,6 +144,7 @@ button {
 .btn-primary {
   background: linear-gradient(180deg, var(--green), var(--green-3));
   color: #021108;
+  box-shadow: 0 10px 24px rgba(0, 255, 106, 0.14);
 }
 
 .btn-primary:hover {
@@ -152,7 +153,7 @@ button {
 }
 
 .btn-outline {
-  border-color: rgba(0, 255, 106, 0.32);
+  border-color: rgba(0, 255, 106, 0.28);
   background: transparent;
   color: var(--green);
 }
@@ -163,15 +164,14 @@ button {
 
 /* HERO */
 .hero {
-  padding: 92px 0 72px;
+  padding: 76px 0 62px;
   background: #000000;
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
-  max-width: 980px;
+  max-width: 940px;
 }
 
 .hero-content {
@@ -184,28 +184,29 @@ button {
   min-height: 36px;
   padding: 6px 15px;
   border-radius: 999px;
-  border: 1px solid rgba(0, 255, 106, 0.22);
-  background: rgba(0, 255, 106, 0.05);
+  border: 1px solid rgba(0, 255, 106, 0.2);
+  background: rgba(0, 255, 106, 0.04);
   color: #9effc6;
-  font-family: 'Sora', sans-serif;
-  font-size: 0.84rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.08em;
   margin-bottom: 18px;
 }
 
 .hero-content h1 {
-  font-family: 'Sora', sans-serif;
-  font-size: clamp(2.2rem, 5vw, 4.2rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
   margin-bottom: 18px;
   color: #f4f7f5;
+  max-width: 900px;
 }
 
 .hero-content p {
-  max-width: 790px;
-  font-size: 1.12rem;
+  max-width: 760px;
+  font-size: 1.08rem;
   color: var(--muted);
 }
 
@@ -231,7 +232,7 @@ button {
   position: relative;
   padding-left: 20px;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 0.98rem;
 }
 
 .hero-list li::before,
@@ -248,7 +249,7 @@ button {
 
 /* SEÇÕES */
 .section {
-  padding: 84px 0;
+  padding: 82px 0;
   background: #000000;
 }
 
@@ -265,15 +266,15 @@ button {
 }
 
 .section-header h2 {
-  font-family: 'Sora', sans-serif;
-  font-size: clamp(1.9rem, 2.5vw, 2.8rem);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.8rem, 2.4vw, 2.6rem);
   line-height: 1.08;
   margin-bottom: 12px;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
 }
 
 .section-header p {
-  font-size: 1.06rem;
+  font-size: 1.02rem;
   color: var(--muted);
 }
 
@@ -285,23 +286,23 @@ button {
 }
 
 .info-card {
-  background: linear-gradient(180deg, #080808, #111111);
+  background: linear-gradient(180deg, #080808, #101010);
   border: 1px solid rgba(0, 255, 106, 0.08);
   border-radius: var(--radius);
-  padding: 30px;
+  padding: 32px;
   box-shadow: var(--shadow);
 }
 
 .info-card h3 {
-  font-family: 'Sora', sans-serif;
-  font-size: 1.18rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.14rem;
   line-height: 1.2;
   margin-bottom: 16px;
 }
 
 .info-card p,
 .info-card li {
-  font-size: 1rem;
+  font-size: 0.98rem;
   color: var(--muted);
 }
 
@@ -316,8 +317,8 @@ button {
 }
 
 .info-highlight h4 {
-  font-family: 'Sora', sans-serif;
-  font-size: 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.98rem;
   margin-bottom: 14px;
   color: #f5f7f5;
 }
@@ -330,7 +331,7 @@ button {
 }
 
 .product-card {
-  background: linear-gradient(180deg, #080808, #111111);
+  background: linear-gradient(180deg, #080808, #101010);
   border: 1px solid rgba(0, 255, 106, 0.08);
   border-radius: 20px;
   overflow: hidden;
@@ -348,8 +349,8 @@ button {
   position: relative;
   width: 100%;
   height: 320px;
-  padding: 18px;
-  background: #050505;
+  padding: 20px;
+  background: #040404;
   border: 0;
   border-bottom: 1px solid rgba(0, 255, 106, 0.06);
   display: flex;
@@ -385,10 +386,9 @@ button {
   background: rgba(0, 0, 0, 0.72);
   border: 1px solid rgba(0, 255, 106, 0.18);
   color: #a6ffca;
-  font-family: 'Sora', sans-serif;
-  font-size: 0.72rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
 }
 
 .product-body {
@@ -399,16 +399,16 @@ button {
   display: inline-block;
   margin-bottom: 10px;
   color: #9dffc8;
-  font-family: 'Sora', sans-serif;
-  font-size: 0.78rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.76rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
 .product-body h3 {
-  font-family: 'Sora', sans-serif;
-  font-size: 1.08rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.04rem;
   line-height: 1.2;
   margin-bottom: 12px;
 }
@@ -423,8 +423,8 @@ button {
   border-radius: 10px;
   border: 1px solid rgba(0, 255, 106, 0.24);
   color: var(--green);
-  font-family: 'Sora', sans-serif;
-  font-size: 0.9rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.88rem;
   font-weight: 700;
   transition: all var(--transition);
 }
@@ -439,7 +439,7 @@ button {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 24px;
   align-items: center;
-  background: linear-gradient(180deg, #080808, #111111);
+  background: linear-gradient(180deg, #080808, #101010);
   border: 1px solid rgba(0, 255, 106, 0.12);
   border-radius: 24px;
   padding: 32px;
@@ -447,14 +447,14 @@ button {
 }
 
 .contact-content h2 {
-  font-family: 'Sora', sans-serif;
-  font-size: clamp(1.7rem, 2.2vw, 2.4rem);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.6rem, 2.1vw, 2.2rem);
   line-height: 1.08;
   margin-bottom: 10px;
 }
 
 .contact-content p {
-  font-size: 1.06rem;
+  font-size: 1.02rem;
   color: var(--muted);
   max-width: 640px;
 }
@@ -480,14 +480,14 @@ button {
 }
 
 .footer h3 {
-  font-family: 'Sora', sans-serif;
-  font-size: 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.98rem;
   color: var(--green);
   margin-bottom: 12px;
 }
 
 .footer p {
-  font-size: 0.98rem;
+  font-size: 0.96rem;
   color: var(--muted);
   margin-bottom: 8px;
 }
@@ -499,7 +499,7 @@ button {
 
 .footer-bottom p {
   color: #7f8a82;
-  font-size: 0.94rem;
+  font-size: 0.92rem;
 }
 
 /* MODAL */
@@ -529,7 +529,7 @@ button {
   z-index: 2;
   width: min(100% - 32px, 980px);
   margin: 40px auto;
-  background: linear-gradient(180deg, #080808, #111111);
+  background: linear-gradient(180deg, #080808, #101010);
   border: 1px solid rgba(0, 255, 106, 0.14);
   border-radius: 22px;
   box-shadow: var(--shadow);
@@ -574,8 +574,8 @@ button {
 }
 
 .image-modal-info h3 {
-  font-family: 'Sora', sans-serif;
-  font-size: 1.18rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.14rem;
   line-height: 1.2;
 }
 
@@ -592,8 +592,8 @@ button {
   }
 
   .brand-logo {
-    width: 126px;
-    height: 84px;
+    width: 180px;
+    height: 102px;
   }
 }
 
@@ -610,7 +610,7 @@ button {
     text-align: center;
   }
 
-  .brand-copy {
+  .brand-meta {
     justify-content: center;
   }
 
@@ -653,12 +653,12 @@ button {
   }
 
   .brand-logo {
-    width: 150px;
-    height: 96px;
+    width: 190px;
+    height: 108px;
   }
 
   .brand-sub {
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     max-width: 300px;
     text-align: center;
   }
@@ -668,13 +668,13 @@ button {
   }
 
   .hero-content h1 {
-    font-size: 1.95rem;
+    font-size: 1.9rem;
   }
 
   .hero-content p,
   .section-header p,
   .contact-content p {
-    font-size: 1rem;
+    font-size: 0.98rem;
   }
 
   .section {
