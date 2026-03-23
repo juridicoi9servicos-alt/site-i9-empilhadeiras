@@ -64,13 +64,14 @@ button {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.96);
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.98), rgba(0,0,0,0.96));
   border-bottom: 1px solid rgba(0, 255, 106, 0.08);
   backdrop-filter: blur(8px);
 }
 
 .nav {
-  min-height: 132px;
+  min-height: 148px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -80,31 +81,93 @@ button {
 .brand {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 28px;
   min-width: 0;
+  flex: 1;
+}
+
+.brand-logo-wrap {
+  position: relative;
+  width: 220px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(0,255,106,0.04), transparent 65%);
+}
+
+.brand-logo-wrap::before,
+.brand-logo-wrap::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 1px;
+  height: 76px;
+  background: linear-gradient(180deg, transparent, rgba(0,255,106,0.25), transparent);
+  transform: translateY(-50%);
+}
+
+.brand-logo-wrap::before {
+  left: 6px;
+}
+
+.brand-logo-wrap::after {
+  right: 6px;
 }
 
 .brand-logo {
-  width: 210px;
+  width: 200px;
   height: 112px;
   object-fit: contain;
-  object-position: left center;
+  object-position: center;
   flex-shrink: 0;
-  filter: drop-shadow(0 0 12px rgba(0, 255, 106, 0.06));
+  filter:
+    drop-shadow(0 0 10px rgba(0, 255, 106, 0.08))
+    drop-shadow(0 0 20px rgba(0, 255, 106, 0.04));
 }
 
-.brand-meta {
+.brand-center {
   display: flex;
   align-items: center;
+  gap: 18px;
+  flex: 1;
+  min-width: 0;
+}
+
+.brand-line {
+  flex: 1;
+  height: 1px;
+  min-width: 40px;
+  background: linear-gradient(90deg, transparent, rgba(0,255,106,0.22), transparent);
+}
+
+.brand-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.brand-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  color: var(--green);
+  text-transform: uppercase;
+  text-shadow: 0 0 12px rgba(0,255,106,0.08);
 }
 
 .brand-sub {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1rem;
+  margin-top: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.96rem;
   font-weight: 500;
   color: #d8ded9;
-  line-height: 1.25;
-  max-width: 360px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  max-width: 430px;
 }
 
 .menu {
@@ -194,7 +257,7 @@ button {
   margin-bottom: 18px;
 }
 
-.hero-content h1 {
+.hero-content h2 {
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(2rem, 4.5vw, 3.8rem);
   line-height: 1.03;
@@ -581,6 +644,28 @@ button {
 
 /* RESPONSIVO */
 @media (max-width: 1100px) {
+  .nav {
+    min-height: 132px;
+  }
+
+  .brand {
+    gap: 18px;
+  }
+
+  .brand-logo-wrap {
+    width: 180px;
+    height: 108px;
+  }
+
+  .brand-logo {
+    width: 166px;
+    height: 98px;
+  }
+
+  .brand-title {
+    font-size: 1.6rem;
+  }
+
   .products-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -590,28 +675,27 @@ button {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
-
-  .brand-logo {
-    width: 180px;
-    height: 102px;
-  }
 }
 
 @media (max-width: 860px) {
   .nav {
     flex-direction: column;
     align-items: stretch;
-    padding: 18px 0;
+    padding: 18px 0 22px;
   }
 
   .brand {
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
   }
 
-  .brand-meta {
-    justify-content: center;
+  .brand-center {
+    width: 100%;
+  }
+
+  .brand-line {
+    min-width: 20px;
   }
 
   .menu {
@@ -652,22 +736,39 @@ button {
     width: min(100% - 24px, var(--container));
   }
 
+  .nav {
+    min-height: auto;
+  }
+
+  .brand-logo-wrap {
+    width: 170px;
+    height: 104px;
+  }
+
   .brand-logo {
-    width: 190px;
-    height: 108px;
+    width: 156px;
+    height: 94px;
+  }
+
+  .brand-center {
+    gap: 10px;
+  }
+
+  .brand-title {
+    font-size: 1.15rem;
+    letter-spacing: 0.08em;
   }
 
   .brand-sub {
-    font-size: 0.9rem;
-    max-width: 300px;
-    text-align: center;
+    font-size: 0.85rem;
+    max-width: 280px;
   }
 
   .menu {
     gap: 14px;
   }
 
-  .hero-content h1 {
+  .hero-content h2 {
     font-size: 1.9rem;
   }
 
