@@ -4,14 +4,13 @@
   --bg-3: #0a0a0a;
   --bg-4: #101010;
   --line: rgba(255, 255, 255, 0.07);
-  --line-green: rgba(0, 255, 106, 0.18);
-  --text: #f4f7f5;
-  --muted: #bcc4bf;
-  --green: #00ff6a;
+  --green: #00ff66;
   --green-2: #00e35f;
   --green-3: #00b64d;
+  --text: #f4f7f5;
+  --muted: #bcc4bf;
   --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
-  --shadow-green: 0 14px 30px rgba(0, 255, 106, 0.08);
+  --shadow-green: 0 14px 30px rgba(0, 255, 102, 0.08);
   --radius: 20px;
   --radius-sm: 12px;
   --container: 1240px;
@@ -64,115 +63,59 @@ button {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background:
-    linear-gradient(180deg, rgba(0,0,0,0.98), rgba(0,0,0,0.96));
-  border-bottom: 1px solid rgba(0, 255, 106, 0.08);
+  background: #000000;
+  border-bottom: 1px solid rgba(0, 255, 102, 0.08);
   backdrop-filter: blur(8px);
 }
 
-.nav {
-  min-height: 148px;
-  display: flex;
+.header-top {
+  min-height: 160px;
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  gap: 28px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 28px;
-  min-width: 0;
-  flex: 1;
-}
-
-.brand-logo-wrap {
-  position: relative;
-  width: 220px;
-  height: 120px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at center, rgba(0,255,106,0.04), transparent 65%);
+  min-width: 0;
+  position: relative;
 }
 
-.brand-logo-wrap::before,
-.brand-logo-wrap::after {
+.brand::before,
+.brand::after {
   content: '';
   position: absolute;
   top: 50%;
-  width: 1px;
-  height: 76px;
-  background: linear-gradient(180deg, transparent, rgba(0,255,106,0.25), transparent);
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 102, 0.25), transparent);
   transform: translateY(-50%);
 }
 
-.brand-logo-wrap::before {
-  left: 6px;
+.brand::before {
+  left: 0;
 }
 
-.brand-logo-wrap::after {
-  right: 6px;
+.brand::after {
+  right: 0;
 }
 
 .brand-logo {
-  width: 200px;
-  height: 112px;
+  width: min(100%, 420px);
+  height: auto;
   object-fit: contain;
-  object-position: center;
-  flex-shrink: 0;
   filter:
-    drop-shadow(0 0 10px rgba(0, 255, 106, 0.08))
-    drop-shadow(0 0 20px rgba(0, 255, 106, 0.04));
-}
-
-.brand-center {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  flex: 1;
-  min-width: 0;
-}
-
-.brand-line {
-  flex: 1;
-  height: 1px;
-  min-width: 40px;
-  background: linear-gradient(90deg, transparent, rgba(0,255,106,0.22), transparent);
-}
-
-.brand-text-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.brand-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: 0.12em;
-  color: var(--green);
-  text-transform: uppercase;
-  text-shadow: 0 0 12px rgba(0,255,106,0.08);
-}
-
-.brand-sub {
-  margin-top: 10px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.96rem;
-  font-weight: 500;
-  color: #d8ded9;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  max-width: 430px;
+    drop-shadow(0 0 10px rgba(0, 255, 102, 0.08))
+    drop-shadow(0 0 24px rgba(0, 255, 102, 0.04));
 }
 
 .menu {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 30px;
   flex-wrap: wrap;
 }
@@ -187,6 +130,22 @@ button {
 
 .menu a:hover {
   color: var(--green);
+}
+
+.header-line-wrap {
+  padding-bottom: 12px;
+}
+
+.header-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(0, 255, 102, 0.18) 20%,
+    rgba(0, 255, 102, 0.32) 50%,
+    rgba(0, 255, 102, 0.18) 80%,
+    transparent 100%);
 }
 
 /* BOTÕES */
@@ -207,7 +166,7 @@ button {
 .btn-primary {
   background: linear-gradient(180deg, var(--green), var(--green-3));
   color: #021108;
-  box-shadow: 0 10px 24px rgba(0, 255, 106, 0.14);
+  box-shadow: 0 10px 24px rgba(0, 255, 102, 0.14);
 }
 
 .btn-primary:hover {
@@ -216,13 +175,13 @@ button {
 }
 
 .btn-outline {
-  border-color: rgba(0, 255, 106, 0.28);
+  border-color: rgba(0, 255, 102, 0.28);
   background: transparent;
   color: var(--green);
 }
 
 .btn-outline:hover {
-  background: rgba(0, 255, 106, 0.05);
+  background: rgba(0, 255, 102, 0.05);
 }
 
 /* HERO */
@@ -247,8 +206,8 @@ button {
   min-height: 36px;
   padding: 6px 15px;
   border-radius: 999px;
-  border: 1px solid rgba(0, 255, 106, 0.2);
-  background: rgba(0, 255, 106, 0.04);
+  border: 1px solid rgba(0, 255, 102, 0.2);
+  background: rgba(0, 255, 102, 0.04);
   color: #9effc6;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.82rem;
@@ -257,7 +216,7 @@ button {
   margin-bottom: 18px;
 }
 
-.hero-content h2 {
+.hero-content h1 {
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(2rem, 4.5vw, 3.8rem);
   line-height: 1.03;
@@ -350,7 +309,7 @@ button {
 
 .info-card {
   background: linear-gradient(180deg, #080808, #101010);
-  border: 1px solid rgba(0, 255, 106, 0.08);
+  border: 1px solid rgba(0, 255, 102, 0.08);
   border-radius: var(--radius);
   padding: 32px;
   box-shadow: var(--shadow);
@@ -376,7 +335,7 @@ button {
 .info-highlight {
   margin-top: 26px;
   padding-top: 22px;
-  border-top: 1px solid rgba(0, 255, 106, 0.08);
+  border-top: 1px solid rgba(0, 255, 102, 0.08);
 }
 
 .info-highlight h4 {
@@ -395,7 +354,7 @@ button {
 
 .product-card {
   background: linear-gradient(180deg, #080808, #101010);
-  border: 1px solid rgba(0, 255, 106, 0.08);
+  border: 1px solid rgba(0, 255, 102, 0.08);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -404,7 +363,7 @@ button {
 
 .product-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(0, 255, 106, 0.2);
+  border-color: rgba(0, 255, 102, 0.2);
   box-shadow: var(--shadow-green), var(--shadow);
 }
 
@@ -415,7 +374,7 @@ button {
   padding: 20px;
   background: #040404;
   border: 0;
-  border-bottom: 1px solid rgba(0, 255, 106, 0.06);
+  border-bottom: 1px solid rgba(0, 255, 102, 0.06);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -447,7 +406,7 @@ button {
   padding: 7px 10px;
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.72);
-  border: 1px solid rgba(0, 255, 106, 0.18);
+  border: 1px solid rgba(0, 255, 102, 0.18);
   color: #a6ffca;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.7rem;
@@ -484,7 +443,7 @@ button {
   min-height: 44px;
   padding: 10px 18px;
   border-radius: 10px;
-  border: 1px solid rgba(0, 255, 106, 0.24);
+  border: 1px solid rgba(0, 255, 102, 0.24);
   color: var(--green);
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.88rem;
@@ -493,7 +452,7 @@ button {
 }
 
 .product-cta:hover {
-  background: rgba(0, 255, 106, 0.06);
+  background: rgba(0, 255, 102, 0.06);
 }
 
 /* CONTATO */
@@ -503,7 +462,7 @@ button {
   gap: 24px;
   align-items: center;
   background: linear-gradient(180deg, #080808, #101010);
-  border: 1px solid rgba(0, 255, 106, 0.12);
+  border: 1px solid rgba(0, 255, 102, 0.12);
   border-radius: 24px;
   padding: 32px;
   box-shadow: var(--shadow);
@@ -531,7 +490,7 @@ button {
 /* FOOTER */
 .footer {
   background: #000000;
-  border-top: 1px solid rgba(0, 255, 106, 0.08);
+  border-top: 1px solid rgba(0, 255, 102, 0.08);
   padding: 56px 0 20px;
 }
 
@@ -593,7 +552,7 @@ button {
   width: min(100% - 32px, 980px);
   margin: 40px auto;
   background: linear-gradient(180deg, #080808, #101010);
-  border: 1px solid rgba(0, 255, 106, 0.14);
+  border: 1px solid rgba(0, 255, 102, 0.14);
   border-radius: 22px;
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -607,7 +566,7 @@ button {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 255, 106, 0.18);
+  border: 1px solid rgba(0, 255, 102, 0.18);
   background: rgba(0, 0, 0, 0.72);
   color: #ffffff;
   font-size: 1.5rem;
@@ -644,26 +603,19 @@ button {
 
 /* RESPONSIVO */
 @media (max-width: 1100px) {
-  .nav {
-    min-height: 132px;
-  }
-
-  .brand {
+  .header-top {
+    grid-template-columns: 1fr;
     gap: 18px;
+    padding-top: 18px;
   }
 
-  .brand-logo-wrap {
-    width: 180px;
-    height: 108px;
+  .brand::before,
+  .brand::after {
+    display: none;
   }
 
-  .brand-logo {
-    width: 166px;
-    height: 98px;
-  }
-
-  .brand-title {
-    font-size: 1.6rem;
+  .menu {
+    justify-content: center;
   }
 
   .products-grid {
@@ -678,28 +630,13 @@ button {
 }
 
 @media (max-width: 860px) {
-  .nav {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 18px 0 22px;
-  }
-
-  .brand {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .brand-center {
-    width: 100%;
-  }
-
-  .brand-line {
-    min-width: 20px;
+  .header-top {
+    min-height: auto;
+    padding-top: 16px;
   }
 
   .menu {
-    justify-content: center;
+    gap: 16px;
   }
 
   .products-grid,
@@ -736,39 +673,11 @@ button {
     width: min(100% - 24px, var(--container));
   }
 
-  .nav {
-    min-height: auto;
-  }
-
-  .brand-logo-wrap {
-    width: 170px;
-    height: 104px;
-  }
-
   .brand-logo {
-    width: 156px;
-    height: 94px;
+    width: min(100%, 300px);
   }
 
-  .brand-center {
-    gap: 10px;
-  }
-
-  .brand-title {
-    font-size: 1.15rem;
-    letter-spacing: 0.08em;
-  }
-
-  .brand-sub {
-    font-size: 0.85rem;
-    max-width: 280px;
-  }
-
-  .menu {
-    gap: 14px;
-  }
-
-  .hero-content h2 {
+  .hero-content h1 {
     font-size: 1.9rem;
   }
 
