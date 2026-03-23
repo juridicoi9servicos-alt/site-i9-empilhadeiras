@@ -11,7 +11,7 @@
   --green: #00e676;
   --green-2: #00ff88;
   --green-dark: #00b85e;
-  --danger-shadow: 0 18px 40px rgba(0, 0, 0, 0.36);
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.36);
   --glow: 0 0 20px rgba(0, 255, 136, 0.14);
   --radius: 20px;
   --radius-lg: 30px;
@@ -107,6 +107,7 @@ button {
   z-index: 50;
   min-height: var(--header-height);
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   background: rgba(3, 7, 5, 0.72);
   border-bottom: 1px solid rgba(0, 255, 136, 0.12);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
@@ -481,7 +482,7 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 24px;
   padding: 28px;
-  box-shadow: var(--danger-shadow);
+  box-shadow: var(--shadow);
 }
 
 .info-card h3 {
@@ -737,6 +738,7 @@ button {
   inset: 0;
   background: rgba(0, 0, 0, 0.72);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .image-modal-dialog {
