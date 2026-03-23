@@ -5,103 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>I9 Empilhadeiras | Locação</title>
   <meta name="description" content="Locação de empilhadeiras, baterias tracionárias e carregadores em Fortaleza/CE." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <header class="header">
     <div class="container nav">
-      <div class="brand">
+      <a href="#inicio" class="brand">
         <img src="img/logo.png" alt="Logo I9 Empilhadeiras" class="brand-logo">
-        <div>
+        <div class="brand-text">
           <h1 class="brand-title">I9 EMPILHADEIRAS</h1>
           <p class="brand-sub">Locação de empilhadeiras, baterias e carregadores</p>
         </div>
-      </div>
+      </a>
 
-      <nav class="menu" aria-label="Main navigation">
+      <nav class="menu" aria-label="Navegação principal">
         <a href="#sobre">Sobre</a>
         <a href="#equipamentos">Equipamentos</a>
+        <a href="#energia">Baterias e Carregadores</a>
         <a href="#contato" class="btn btn-outline">Orçamento</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+
+    <section class="hero" id="inicio">
       <div class="container hero-grid">
-        <div>
+        <div class="hero-content">
           <span class="tag">LOCAÇÃO EMPRESARIAL</span>
           <h2>Locação de empilhadeiras para operações logísticas e industriais</h2>
           <p>
-            A I9 Empilhadeiras atua com foco em locação de empilhadeiras, baterias tracionárias
-            e carregadores, com atendimento comercial ágil, estrutura empresarial regular e
-            proposta adequada para operações em Fortaleza/CE e região.
+            Soluções para movimentação de carga com atendimento empresarial ágil,
+            equipamentos selecionados e estrutura voltada para operações em Fortaleza/CE e região.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/5585999006501" target="_blank" rel="noopener">Solicitar orçamento</a>
+            <a class="btn btn-primary" href="#contato">Solicitar orçamento</a>
             <a class="btn btn-outline" href="#equipamentos">Ver equipamentos</a>
           </div>
 
-          <ul class="list">
+          <ul class="hero-list">
             <li>Locação de empilhadeiras sem operador</li>
-            <li>Atendimento empresarial e industrial</li>
-            <li>Formalização contratual e atendimento comercial rápido</li>
+            <li>Atendimento para operações empresariais e industriais</li>
+            <li>Opções com baterias tracionárias e carregadores</li>
           </ul>
         </div>
 
-        <div class="hero-box" aria-hidden="true">
-          <img src="img/banner-carregadores.png" alt="Carregadores tracionários" class="hero-image">
+        <div class="hero-visual">
+          <div class="hero-card">
+            <img src="img/banner-retratil.png" alt="Empilhadeira elétrica retrátil Yale MR16" class="hero-image">
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="sobre" class="section section-dark">
+    <section class="section section-dark" id="sobre">
       <div class="container">
-        <div class="section-title">
+        <div class="section-header">
           <span class="tag">QUEM SOMOS</span>
           <h3>I9 Empilhadeiras</h3>
+          <p>
+            Atuação focada em locação de empilhadeiras, baterias tracionárias e carregadores,
+            com proposta comercial adequada para operações empresariais.
+          </p>
         </div>
 
-        <div class="grid-2">
-          <div class="card">
+        <div class="info-grid">
+          <article class="info-card">
             <h4>Apresentação institucional</h4>
             <p>
-              A <strong>I9 Empilhadeiras</strong>, nome fantasia de <strong>INOVE LOCAÇÃO DE EMPILHADEIRAS E BATERIAS LTDA</strong>,
-              atua com locação de máquinas e equipamentos sem operador, com foco em empilhadeiras,
-              baterias tracionárias e carregadores para operações empresariais.
+              A <strong>I9 Empilhadeiras</strong>, nome fantasia de
+              <strong>INOVE LOCAÇÃO DE EMPILHADEIRAS E BATERIAS LTDA</strong>,
+              atua com locação de máquinas e equipamentos sem operador, com foco em
+              movimentação de carga, baterias tracionárias e carregadores.
             </p>
-          </div>
+          </article>
 
-          <div class="card">
+          <article class="info-card">
             <h4>Dados da empresa</h4>
-            <ul class="list">
-              <li>CNPJ: 64.988.670/0001-40</li>
-              <li>Endereço: Rua D, nº 630, Sala B, Ancuri, Fortaleza/CE</li>
-              <li>E-mail: financeiro.i9empilhadeiras@gmail.com</li>
-              <li>WhatsApp: (85) 99900-6501</li>
+            <ul class="clean-list">
+              <li><strong>CNPJ:</strong> 64.988.670/0001-40</li>
+              <li><strong>Endereço:</strong> Rua D, nº 630, Sala B, Ancuri, Fortaleza/CE</li>
+              <li><strong>E-mail:</strong> financeiro.i9empilhadeiras@gmail.com</li>
+              <li><strong>WhatsApp:</strong> (85) 99900-6501</li>
             </ul>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="equipamentos" class="section">
+    <section class="section" id="equipamentos">
       <div class="container">
-        <div class="section-title">
+        <div class="section-header">
           <span class="tag">EQUIPAMENTOS</span>
-          <h3>Destaques para locação</h3>
+          <h3>Modelos para locação</h3>
+          <p>Equipamentos organizados em cards com leitura mais clara e apresentação comercial mais profissional.</p>
         </div>
 
-        <div class="products">
-          <article class="product">
+        <div class="products-grid">
+          <article class="product-card">
             <img src="img/banner-retratil.png" alt="Yale MR16" class="product-image">
-            <div class="product-content">
+            <div class="product-body">
+              <span class="product-type">Empilhadeira elétrica retrátil</span>
               <h4>Yale MR16</h4>
-              <small>Empilhadeira elétrica retrátil</small>
-              <ul class="list">
+              <ul class="clean-list">
                 <li>Capacidade de 2.000 kg</li>
                 <li>Corredor estreito</li>
                 <li>Elevação de até 8.500 mm</li>
@@ -109,12 +120,12 @@
             </div>
           </article>
 
-          <article class="product">
+          <article class="product-card">
             <img src="img/banner-patolada.png" alt="Still EGV 16" class="product-image">
-            <div class="product-content">
+            <div class="product-body">
+              <span class="product-type">Empilhadeira elétrica patolada</span>
               <h4>Still EGV 16</h4>
-              <small>Empilhadeira elétrica patolada</small>
-              <ul class="list">
+              <ul class="clean-list">
                 <li>Capacidade de 1.600 kg e 1.800 kg</li>
                 <li>Elevação máxima de 5.466 mm</li>
                 <li>Plataforma rebatível</li>
@@ -122,12 +133,12 @@
             </div>
           </article>
 
-          <article class="product">
+          <article class="product-card">
             <img src="img/banner-transpaleteira.png" alt="Still ERX 27" class="product-image">
-            <div class="product-content">
+            <div class="product-body">
+              <span class="product-type">Transpaleteira elétrica</span>
               <h4>Still ERX 27</h4>
-              <small>Transpaleteira elétrica tracionária</small>
-              <ul class="list">
+              <ul class="clean-list">
                 <li>Capacidade de 2.700 kg</li>
                 <li>Operador a bordo</li>
                 <li>Bateria 24V</li>
@@ -135,12 +146,12 @@
             </div>
           </article>
 
-          <article class="product">
+          <article class="product-card">
             <img src="img/banner-combustao.png" alt="Still CLX-25 combustão" class="product-image">
-            <div class="product-content">
+            <div class="product-body">
+              <span class="product-type">Empilhadeira de combustão</span>
               <h4>Still CLX-25</h4>
-              <small>Empilhadeira de combustão</small>
-              <ul class="list">
+              <ul class="clean-list">
                 <li>Carga de 2.500 kg</li>
                 <li>Elevação de 4.700 mm</li>
                 <li>Torre duplex</li>
@@ -148,12 +159,12 @@
             </div>
           </article>
 
-          <article class="product">
+          <article class="product-card">
             <img src="img/banner-glp.png" alt="Still CLX-25 GLP" class="product-image">
-            <div class="product-content">
+            <div class="product-body">
+              <span class="product-type">Empilhadeira a GLP</span>
               <h4>Still CLX-25</h4>
-              <small>Empilhadeira a GLP</small>
-              <ul class="list">
+              <ul class="clean-list">
                 <li>Capacidade de 2.500 kg</li>
                 <li>Elevação de 4.700 mm</li>
                 <li>Torre triplex</li>
@@ -161,12 +172,12 @@
             </div>
           </article>
 
-          <article class="product">
+          <article class="product-card">
             <img src="img/banner-eletrica.jpeg" alt="Paletrans PT 1654 e PT 1645" class="product-image">
-            <div class="product-content">
+            <div class="product-body">
+              <span class="product-type">Empilhadeira elétrica tracionária</span>
               <h4>Paletrans PT 1654 / PT 1645</h4>
-              <small>Empilhadeira elétrica tracionária</small>
-              <ul class="list">
+              <ul class="clean-list">
                 <li>Capacidade de 1.600 kg</li>
                 <li>Modelos com 5.400 mm e 4.500 mm</li>
                 <li>Movimentação e armazenagem</li>
@@ -177,14 +188,45 @@
       </div>
     </section>
 
-    <section id="contato" class="section section-dark">
+    <section class="section section-dark" id="energia">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">ENERGIA E SUPORTE</span>
+          <h3>Baterias tracionárias e carregadores</h3>
+          <p>Área separada para reforçar a linha de apoio operacional e evitar mistura visual com o setor de equipamentos.</p>
+        </div>
+
+        <div class="energy-grid">
+          <article class="energy-card energy-text">
+            <h4>Estrutura complementar para sua operação</h4>
+            <p>
+              Além da locação de empilhadeiras, a I9 Empilhadeiras também atua com soluções em
+              baterias tracionárias e carregadores, permitindo maior continuidade operacional e
+              melhor adequação à necessidade de cada cliente.
+            </p>
+
+            <ul class="clean-list">
+              <li>Baterias para operações elétricas</li>
+              <li>Carregadores tracionários em diferentes voltagens</li>
+              <li>Atendimento comercial para composição da solução</li>
+            </ul>
+          </article>
+
+          <article class="energy-card energy-image-card">
+            <img src="img/banner-carregadores.png" alt="Carregadores de baterias tracionárias" class="energy-image">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
       <div class="container">
         <div class="contact-box">
-          <div>
+          <div class="contact-content">
             <span class="tag">CONTATO</span>
             <h3>Solicite seu orçamento</h3>
             <p>
-              Entre em contato com a I9 Empilhadeiras para análise da melhor solução para sua operação.
+              Entre em contato para análise da melhor solução para sua operação e disponibilidade comercial.
             </p>
           </div>
 
@@ -195,6 +237,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
@@ -218,8 +261,8 @@
       </div>
     </div>
 
-    <div class="container">
-      <p class="mini">Site institucional da I9 Empilhadeiras.</p>
+    <div class="container footer-bottom">
+      <p>Site institucional da I9 Empilhadeiras.</p>
     </div>
   </footer>
 
